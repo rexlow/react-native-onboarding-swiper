@@ -15,7 +15,7 @@ class DoneButton extends React.Component {
         toValue: 1,
         duration: 1000,
       }).start();
-    }, 1000);
+    }, this.props.fadeDuration);
   }
 
   render() {

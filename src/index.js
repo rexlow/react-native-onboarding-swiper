@@ -129,6 +129,7 @@ class Onboarding extends Component {
       DotComponent,
       flatlistProps,
       skipToPage,
+      doneButtonFadeDuration
     } = this.props;
     const currentPage = pages[this.state.currentPage];
     const currentBackgroundColor = currentPage.backgroundColor;
@@ -214,6 +215,7 @@ class Onboarding extends Component {
               DoneButtonComponent={DoneButtonComponent}
               NextButtonComponent={NextButtonComponent}
               DotComponent={DotComponent}
+              doneButtonFadeDuration={doneButtonFadeDuration}
             />
           </SafeAreaView>
         )}
@@ -261,6 +263,7 @@ Onboarding.propTypes = {
   transitionAnimationDuration: PropTypes.number,
   skipToPage: PropTypes.number,
   pageIndexCallback: PropTypes.func,
+  doneButtonFadeDuration: PropTypes.number
 };
 
 Onboarding.defaultProps = {
@@ -289,6 +292,7 @@ Onboarding.defaultProps = {
   transitionAnimationDuration: 500,
   skipToPage: null,
   pageIndexCallback: null,
+  doneButtonFadeDuration: 1000
 };
 
 const styles = {

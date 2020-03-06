@@ -24,6 +24,7 @@ const Pagination = ({
   NextButtonComponent,
   DoneButtonComponent,
   DotComponent,
+  doneButtonFadeDuration
 }) => {
   const isLastPage = currentPage + 1 === numPages;
 
@@ -58,6 +59,7 @@ const Pagination = ({
     isLastPage && (
       <DoneButtonComponent
         isLight={isLight}
+        fadeDuration={doneButtonFadeDuration}
 		allowFontScaling={allowFontScaling}
         onPress={() => {
           if (typeof onDone === 'function') {
